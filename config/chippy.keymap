@@ -52,7 +52,7 @@
                         bindings = <
    &trans  &kp HASH     &kp SEMI      &kp LPAR    &kp RPAR   &kp DQT             &kp K_PP   &kp K_STOP     &kp K_VOL_UP &kp K_VOL_DN &trans     &trans
    &trans  &kp PIPE     &kp GT        &kp LBKT    &kp RBKT   &kp COLON           &trans     &trans         &kp GRAVE    &kp BSLH     &trans     &trans
-   &trans  &kp LSHIFT   &kp PERCENT   &kp MINUS   &kp UNDER  &kp EQUAL           &kp K_BACk &kp K_FORWARD  &trans       &trans       &kp RSHIFT &trans
+   &trans  &kp LSHIFT   &kp PERCENT   &kp MINUS   &kp UNDER  &kp EQUAL           &kp K_BACK &kp K_FORWARD  &trans       &trans       &kp RSHIFT &trans
                              &mt LGUI TAB  &kp LCTRL  &kp LSHIFT                 &kp SPACE   &kp BSPC    &kp ESC
                         >;
                 };
