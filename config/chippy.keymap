@@ -13,6 +13,31 @@
 #define RAISE 2
 
 / {
+    macros {
+        remote_pass: remote_pass {
+            label = "ZM_remote_pass";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp R &kp E &kp K &kp DOT &kp X &kp C &kp F &kp N0 &kp N &kp H &kp K &kp UNDER>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp P &kp R &kp Z>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp N3 &kp C &kp R &kp D>
+                ;
+        },
+        vim_save: vim_save {
+            label = "ZM_vim_save";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp COLON &kp W &kp RET> 
+                ;
+        };
+    };
+};
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 
@@ -36,9 +61,9 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans &trans      &kp N7   &kp N8   &kp N9   &kp N0               &kp HOME   &kp PG_DN   &kp PG_UP    &kp END    &trans   &kp BSPC
-   &trans &trans      &kp N4   &kp N5   &kp N6   &trans               &kp LEFT   &kp DOWN    &kp UP       &kp RIGHT  &trans   &trans
-   &trans &kp LCTRL  &kp N1   &kp N2   &kp N3   &trans               &bt BT_SEL 5  &bt BT_SEL 4  &bt BT_SEL 3 &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_CLR
+   &trans &remote_pass &kp N7   &kp N8   &kp N9   &kp N0               &kp HOME   &kp PG_DN   &kp PG_UP    &kp END    &trans   &kp BSPC
+   &trans &vim_save    &kp N4   &kp N5   &kp N6   &trans               &kp LEFT   &kp DOWN    &kp UP       &kp RIGHT  &trans   &trans
+   &trans &kp LCTRL    &kp N1   &kp N2   &kp N3   &trans               &bt BT_SEL 5  &bt BT_SEL 4  &bt BT_SEL 3 &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_CLR
                        &mt LGUI TAB  &kp LSHIFT  &mt LGUI RET        &kp SPACE  &kp BSPC   &mt LALT ESC
                         >;
                 };
