@@ -25,7 +25,7 @@
                 , <&macro_release &kp LSHFT>
                 , <&macro_tap &kp N3 &kp C &kp R &kp D>
                 ;
-        },
+        };
         vim_save: vim_save {
             label = "ZM_vim_save";
             compatible = "zmk,behavior-macro";
