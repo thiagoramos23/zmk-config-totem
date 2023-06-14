@@ -34,6 +34,14 @@
                 = <&macro_tap &kp COLON &kp W &kp RET> 
                 ;
         };
+        vim_quit: vim_quit {
+            label = "ZM_vim_quit";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp COLON &kp Q &kp RET> 
+                ;
+        };
     };
 };
 
@@ -62,7 +70,7 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &trans &remote_pass &kp N7   &kp N8   &kp N9   &kp N0               &kp HOME   &kp PG_DN   &kp PG_UP    &kp END    &trans   &kp BSPC
-   &trans &vim_save    &kp N4   &kp N5   &kp N6   &trans               &kp LEFT   &kp DOWN    &kp UP       &kp RIGHT  &trans   &trans
+   &trans &vim_save    &kp N4   &kp N5   &kp N6   &trans               &kp LEFT   &kp DOWN    &kp UP       &kp RIGHT  &vim_quit   &trans
    &trans &kp LCTRL    &kp N1   &kp N2   &kp N3   &trans               &bt BT_SEL 5  &bt BT_SEL 4  &bt BT_SEL 3 &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_CLR
                        &mt LGUI TAB  &kp LSHIFT  &mt LGUI RET        &kp SPACE  &kp BSPC   &mt LALT ESC
                         >;
